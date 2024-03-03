@@ -19,75 +19,109 @@
         </main>
         <div class="popup">
             <!-- Object methods -->
-            <div class="objects">
-                <div class="objects__list">
-                    <div class="object object-keys">keys()</div>
-                    <div class="object object-values">values()</div>
+            <div class="objects methods">
+                <div class="methods__list">
+                    <div class="method object-keys">keys()</div>
+                    <div class="method object-values">values()</div>
                 </div>
-                <div class="keys__info info-block">
-                    <p>Повертає масив рядків які є властивостями об'єкта</p>
-                    <div class="keys__info_example example-code">
-                        <img src="" alt="">
-                        const fruits = ['apple', 'banana', 'lemon'];</br>
-                        const length = fruits.push('orange');</br>
-                        // fruits стане ['apple', 'banana', 'orange'], а length = 3;
+                <div class="keys__info info__block">
+                    <div class="info__block_text">
+                        <h4><i>Опис:</i> Object.kays повертає масив властивостей із заданого об'єкта.</h4>
+                        <div class="syntax__block">
+                            <i>Синтаксис:</i> <span id="syntax__object_keys">Object.kays(obj)</span>
+                            <ul>
+                                <li>obj - об'єкт чиї властивості будуть повернуті.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__block_example">
+                        <img src="./img/Object/Object.keys().png">
                     </div>
                 </div>
-                <div class="values__info info-block">
-                    <p>Повертає масив рядків які є значеннями властивостей об'єкта</p>
-                    <div class="values__info_example example-code">
-                        const fruits = ['apple', 'banana'];</br>
-                        const length = fruits.push('orange');</br>
-                        // fruits стане ['apple', 'banana', 'orange'], а length = 3;
+                <div class="values__info info__block">
+                    <div class="info__block_text">
+                        <h4><i>Опис:</i> Object.values повертає масив значень властивостей із заданого об'єкта.</h4>
+                        <div class="syntax__block">
+                            <i>Синтаксис:</i> <span id="syntax_object_values">Object.values(obj)</span>
+                            <ul>
+                                <li>obj - об'єкт чиї значення властивостей будуть повернуті.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__block_example">
+                        <img src="./img/Object/Object.values().png">
                     </div>
                 </div>
             </div>
             <!-- Array methods -->
-            <div class="arrays">
-                <div class="arrays__list">
-                    <div class="array array-push">push()</div>
-                    <div class="array array-pop">pop()</div>
-                    <div class="array array-shift">shift()</div>
-                    <div class="array array-unshift">unshift()</div>
+            <div class="arrays methods">
+                <div class="methods__list">
+                    <div class="method array-push">push()</div>
+                    <div class="method array-pop">pop()</div>
+                    <div class="method array-shift">shift()</div>
+                    <div class="method array-unshift">unshift()</div>
                 </div>
-                <div class="push__info info-block">
-                    <div class="push__info_text">
+                <div class="push__info info__block">
+                    <div class="info__block_text">
                         <h4><i>Опис:</i> push додає елементи в кінець існуючого масиву.</h4>
                         <h4><i>Повертає:</i> push повертає нову довжину масиву після додавання елементів.</h4>
                         <div class="syntax__block">
-                            <i>Синтаксис:</i> <span id="syntax">array.push(element1, element2, ..., elementN)</span>
+                            <i>Синтаксис:</i> <span id="syntax__push">array.push(element1, element2, ..., elementN)</span>
                             <ul>
                                 <li>array - масив в який додаємо елементи.</li>
                                 <li>elementN - елемент чи елементи які додаємо в масив array.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="push__info_example">
-                        <img src="./img/push().png">
+                    <div class="info__block_example">
+                        <img src="./img/Array/push().png">
                     </div>
                 </div>
-                <div class="pop__info info-block">
-                    <p>Pop Повертає масив рядків які є властивостями об'єкта</p>
-                    <div class="pop__info_example">
-                        const fruits = ['apple', 'banana'];</br>
-                        const length = fruits.push('orange');</br>
-                        // fruits стане ['apple', 'banana', 'orange'], а length = 3;
+                <div class="pop__info info__block">
+                    <div class="info__block_text">
+                        <h4><i>Опис:</i> pop видаляє останній елемент існуючого масиву.</h4>
+                        <h4><i>Повертає:</i> pop повертає видаленний елемент.</h4>
+                        <div class="syntax__block">
+                            <i>Синтаксис:</i> <span id="syntax__pop">array.pop()</span>
+                            <ul>
+                                <li>array - масив з якого видаляємо елементи.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__block_example">
+                        <img src="./img/Array/pop().png">
                     </div>
                 </div>
-                <div class="shift__info info-block">
-                    <p>Shift Повертає масив рядків які є властивостями об'єкта</p>
-                    <div class="shift__info_example">
-                        const fruits = ['apple', 'banana'];</br>
-                        const length = fruits.push('orange');</br>
-                        // fruits стане ['apple', 'banana', 'orange'], а length = 3;
+                <div class="shift__info info__block">
+                    <div class="info__block_text">
+                        <h4><i>Опис:</i> shift видаляє перший елемент існуючого масиву після чого зсуває всі елементи на одну позицію
+                            вліво змінюючи їх індекс.</h4>
+                        <h4><i>Повертає:</i> shift повертає видаленний елемент.</h4>
+                        <div class="syntax__block">
+                            <i>Синтаксис:</i> <span id="syntax__shift">array.shift()</span>
+                            <ul>
+                                <li>array - масив з якого видаляємо елементи.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__block_example">
+                        <img src="./img/Array/shift().png">
                     </div>
                 </div>
-                <div class="unshift__info info-block">
-                    <p>Unshift Повертає масив рядків які є властивостями об'єкта</p>
-                    <div class="unshift__info_example">
-                        const fruits = ['apple', 'banana'];</br>
-                        const length = fruits.push('orange');</br>
-                        // fruits стане ['apple', 'banana', 'orange'], а length = 3;
+                <div class="unshift__info info__block">
+                    <div class="info__block_text">
+                        <h4><i>Опис:</i> unshift додає елементи на початок існуючого масиву.</h4>
+                        <h4><i>Повертає:</i> unshift повертає нову довжину масиву після додавання елементів.</h4>
+                        <div class="syntax__block">
+                            <i>Синтаксис:</i> <span id="syntax">array.unshift(element1, element2, ..., elementN)</span>
+                            <ul>
+                                <li>array - масив в який додаємо елементи.</li>
+                                <li>elementN - елемент чи елементи які додаємо в масив array.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info__block_example">
+                        <img src="./img/Array/unshift().png">
                     </div>
                 </div>
             </div>

@@ -2,18 +2,22 @@
 const mainObject = document.querySelector('.main__object');
 
 const objects = document.querySelector('.objects');
+
 const objectKeys = document.querySelector('.object-keys');
 const objectValues = document.querySelector('.object-values');
+
 const keysInfo = document.querySelector('.keys__info');
 const valuesInfo = document.querySelector('.values__info');
 // Arrays =========================================================================================
 const mainArray = document.querySelector('.main__array');
 
 const arrays = document.querySelector('.arrays');
+
 const arrayPush = document.querySelector('.array-push');
 const arrayPop = document.querySelector('.array-pop');
 const arrayShift = document.querySelector('.array-shift');
 const arrayUnshift = document.querySelector('.array-unshift');
+
 const pushInfo = document.querySelector('.push__info');
 const popInfo = document.querySelector('.pop__info');
 const shiftInfo = document.querySelector('.shift__info');
@@ -47,7 +51,63 @@ arrayShift.addEventListener('click', (event) => {
 arrayUnshift.addEventListener('click', (event) => {
     unshiftInfo.classList.toggle('visible');
 })
+// ================================================================================================
+//Функція копіювання синтаксису метода в буфер.
+function copyText() {
+    const textToCopy = document.getElementById('syntax__push').innerText;
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            document.getElementById('syntax__push').style.color = '#7f848e';
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+}
+
+const syntax__push = document.getElementById('syntax__push');
+syntax__push.addEventListener('click', copyText);
+// ================================================================================================
+// ================================================================================================
+
+const obj = {
+    red: '#ff0000',
+    active: true,
+    user: {
+        name: 'Varvara',
+    },
+    printName: function() {
+        console.log(this.user.name);
+    }
+}
+const result = Object.values(obj);
+console.log(result); // ['#ff0000', true, {…}, ƒ]                         
+
+// const result = Object.keys(obj);
+// console.log(result); // ['red', 'active', 'user', 'printName']            
+
+
+
+// obj.printName();
+// =======================================================================
+
+
+
+
+
+// const colors = ['red', 'green', 'blue'];
+// const result = colors.shift();
+// console.log(colors); // ['green', 'blue']                                 
+// console.log(result); // 'red'
+
+// =======================================================================
+
+
+
+
+
+
 // Example code ===================================================================================
+/*
 const examples = document.querySelectorAll('.example-code');
 
 const styles = {
@@ -56,7 +116,7 @@ const styles = {
     banana: '<span style="color: yellow;">banana</span>',
     'push()': '<span style="color: red;">push()</span>',
 }
-
+*/
 /*
 examples.forEach(example => {
     if (example.textContent.match(/lemon/g)) {
@@ -80,11 +140,10 @@ examples.forEach(example => {
     }
 })
 */
-
-
 // Получаем все элементы с классом '.example-code'
 //const examples = document.querySelectorAll('.example-code');
 
+/*
 // Функция для поиска и перекраски слов "const" и "lemon"
 function highlightConstAndLemon(element) {
     // Получаем текстовое содержимое элемента
@@ -105,23 +164,5 @@ function highlightConstAndLemon(element) {
 
 // Проходимся по всем элементам и применяем функцию highlightConstAndLemon
 examples.forEach(highlightConstAndLemon);
+*/
 
-
-//Функція копіювання синтаксису метода в буфер.
-function copyText() {
-    const textToCopy = document.getElementById('syntax').innerText;
-    navigator.clipboard.writeText(textToCopy)
-        .then(() => {
-            document.getElementById('syntax').style.color = '#7f848e';
-        })
-        .catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-}
-
-const syntax = document.getElementById('syntax');
-syntax.addEventListener('click', copyText);
-/// ================================================================================================
-// const colors = ['red', 'green', 'blue'];
-// colors.push('yellow', 'black');
-// console.log(colors); // ['red', 'green', 'blue', 'yellow', 'black']

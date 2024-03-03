@@ -1,5 +1,6 @@
 // подключаем обнуляющий стиль ====================================================================
 @import "_nulstyle";
+
 // Canvas (Полотно)================================================================================
 body {
     background: #101318;
@@ -20,7 +21,7 @@ body {
     display: flex;
     justify-content: end;
     align-items: end;
-    padding: 35px 20px;
+    padding: 50px 20px;
     gap: 15px;
 }
 
@@ -31,6 +32,7 @@ body {
     z-index: 10;
     cursor: pointer;
 }
+
 .main__element:hover {
     color: #e5c07b;
 }
@@ -48,47 +50,16 @@ body {
     transition: all 0.1s ease 0s;
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: end;
     overflow-y: hidden;
     overflow-x: hidden;
     //display: none; // не анимируется
 }
 
-.objects {
-    //border: #cafc00 2px solid;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: end;
-    width: 768px;
-    padding: 20px;
-    //padding-bottom: 80px;
-    margin-right: 100px;
-    //overflow: hidden;
-    display: none;
-
-    // .objects__list
-    &__list {
-        //border: #00cafc 2px solid;
-        display: flex;
-        gap: 30px;
-    }
-}
-
-// .object {
-//     color: yellow;
-//     font-size: 24px;
-//     cursor: pointer;
-//     transition: all 0.2s ease 0s;
-// }
-// .object:hover {
-//     color: rgb(0, 204, 255);
-// }
-
 .info {
-    // .info-block
-    &-block {
+
+    // .info__block
+    &__block {
         //border: #e300fc 2px solid;
         width: 100%;
         height: 100%;
@@ -97,167 +68,98 @@ body {
         font-weight: 200;
         color: #abb2bf;
         background-color: #23272e;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         border-radius: 5px;
         overflow: hidden;
 
         display: flex;
         flex-direction: column;
     }
-
-    &-block img {
-        max-width: 100%;
-    }
 }
 
-.keys {
-
-    // .keys__info
-    &__info {
-        display: none;
-    }
-
-    // .keys__info_example
-    &__info_example {}
-}
-
-.values {
-
-    // .values__info
-    &__info {
-        display: none;
-    }
-
-    // .values__info_example
-    &__info_example {}
-}
-// Arrays =========================================================================================
-.arrays {
-    //border: #002afc 2px solid;
-    min-height: 100%;
+.info__block_text:not(:last-child) {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: end;
-    width: 768px;
-    padding: 20px;
-    //padding-bottom: 80px;
-    margin-right: 100px;
-    //overflow: hidden;
-    display: none;
-    // .arrays__list
-    &__list {
-        //border: #00cafc 2px solid;
-        display: flex;
-        gap: 30px;
-    }
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px 0px 20px;
 }
 
-.array {
-    // color: rgb(0, 204, 255);
-    // font-size: 24px;
-    // cursor: pointer;
-    // transition: all 0.2s ease 0s;
-    // .array-push
-    &-push {}
-
-    // .array-pop
-    &-pop {}
-
-    // .array-shift
-    &-shift {}
-
-    // .array-unshift
-    &-unshift {}
-}
-
-// .array:hover {
-//     color: yellow;
-// }
-.push {
-
-    // .push__info
-    &__info {
-        display: none;
-    }
-
-    // .push__info_text
-    &__info_text {
-        padding: 10px 20px 0px 20px;
-    }
-
-    // .push__info_example
-    &__info_example {}
-}
-
-
-.pop {
-
-    // .pop__info
-    &__info {
-        display: none;
-    }
-
-    // .pop__info_example
-    &__info_example {}
-}
-
-.shift {
-
-    // .shift__info
-    &__info {
-        display: none;
-    }
-
-    // .shift__info_example
-    &__info_example {}
-}
-
-.unshift {
-
-    // .unshift__info
-    &__info {
-        display: none;
-    }
-
-    // .unshift__info_example
-    &__info_example {}
+.info__block_example img {
+    max-width: 100%;
+    //max-height: 140px;
 }
 
 .syntax__block ul li {
     margin: 0 0 0 20px;
     list-style: disc;
 }
+
 .syntax__block span {
     cursor: pointer;
 }
 
-.push__info_text:not(:last-child) {
+.methods {
+    //border: #002afc 2px solid;
+    //overflow: hidden;
+    //min-height: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: end;
+    width: 768px;
+    padding: 0px 5px 45px 5px;
+    margin-right: 100px;
+    display: none;
+
+    &__list {
+        //border: #00cafc 2px solid;
+        display: flex;
+        gap: 30px;
+        z-index: 9;
+    }
 }
+
+.method {
+    color: #61afef;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.method:hover {
+    color: #e5c07b;
+}
+
+// Objects ========================================================================================
+.keys__info {
+    display: none;
+}
+
+.values__info {
+    display: none;
+}
+
+// Arrays =========================================================================================
+.push__info {
+    display: none;
+}
+
+.pop__info {
+    display: none;
+}
+
+.shift__info {
+    display: none;
+}
+
+.unshift__info {
+    display: none;
+}
+
 // ================================================================================================
+// Повинен бути в кінці файлу
 .visible {
     display: flex;
 }
 
-// .visible {
-//     opacity: 1;
-//     visibility: visible;
-// }
-
-// .example-code {
-//     //color: #03c5fa;
-// }
-
-// .test {
-//     color: #cafc00;
-// }
-
-// .red {
-//     font-weight: 600;
-//     //color: #00ef1c;
-//     color: red;
-// }
-
+// ================================================================================================
